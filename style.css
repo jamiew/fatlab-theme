@@ -1,0 +1,540 @@
+/*  
+Theme Name: FFFFF.AT
+Theme URI: http://fffff.at/
+Description: Dirtstyle but dope. Based on ub_modicus by upstart blogger
+Version: 0.2
+Author: F.A.T. L.A.B.
+Author URI: http://fffff.at
+License: Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.org/licenses/by-sa/3.0/. Feel free to make any changes, but please keep a link back to Upstart Blogger in your sidebar or footer.
+*/
+
+/*JUNK FI5E ADDED*/
+/* some junk by jdubs at the bottom of the sheet */
+h1.title {
+  font-size: 2em;
+  line-height: 20pt; /* jdubs: fix long titles */
+  padding-bottom: 10px;
+}
+#content {
+  clear: both;
+}
+
+/* for the 'social traffic stats' thing */
+#sidebar2 ol {
+  margin-left: 17px; 
+}
+#sidebar2 ol li {
+  background-color: #ffe9ff;
+  margin: 0;
+  margin-bottom: 5px;
+  width: 80%;
+}
+
+/* jdubs twitter shit */
+#twitter { color: #555; }
+#twitter li { margin-bottom: 6px; }
+#twitter a { }
+#twitter strong {
+  background-color: #eff;
+  color: #070;
+}
+
+
+
+/* @group Normalize */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 1em 0 .5em 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-size: 100%;
+}
+
+h2 {
+  padding-top: 10px;
+  font-size: 1.5em;
+  color: #363;
+}
+
+h3 {
+  font-size: 1.3em;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+/*
+ol,ul {
+  list-style: none;
+}
+*/
+address, caption, cite, code, dfn, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,img {
+  border: 0;
+}
+caption,th {
+  text-align: left;
+}
+q:before, q:after {
+  content: '';
+}
+/* @end */
+
+/* @group Structure */
+
+#homebody {
+text-align: left;
+font-size: 1.5em;
+line-height: 2.5em;
+letter-spacing: .1em;
+width: 916px;
+padding-top: 200px;
+}
+
+#wrapper {
+	font-size: 1.2em;
+	width: 916px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+
+#header {
+text-align: left;
+margin: 20px 0;
+height: 150px;
+font-size: 3em;
+font-variant: small-caps;
+}
+
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fff;
+  color: #444;
+  font: 62.5%/200% Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+
+/* @end */
+
+a:link, a:visited {
+	color: #444;
+	text-decoration: none;
+	font-weight: bold;
+        background: #fff000;
+}
+
+/* jdubs link mods: make them different than tags, headers, etc... and readable */
+.content a, .bubble a,
+#sidebar2 #twitter span a {
+  background: transparent;
+  border-bottom: 1px dotted #aaa;
+  padding-bottom: 0;
+  color: #220052;
+}
+h1 a, h1.title a {
+  background-color: #fff000;
+  color: #222;
+  padding: 3px 2px;
+  border: 0;
+}
+
+a:hover, h1.title a:hover {
+  color: #555;
+  /*border-bottom: none;*/
+  background-color: #ff00ff;
+}
+
+
+#sidebar a       {border: none; font-weight: bold; background: #ff00ff; color: #000000;text-decoration: none; padding: 1px 2px;}
+#sidebar a:hover {border: none; font-weight: bold; background: #fff000; color: #000000;text-decoration: none;}
+
+/*.post li p, #sidebar2 li p {display: inline;}*/
+.post li a, #sidebar2 li a { font-weight: bold; background-color: #FFF777; }
+/*.post li, #sidebar2 li {display: inline;}*/
+#sidebar ul, #sidebar2 ul { list-style: none; }
+
+/*#sidebar2 ul {padding-top: 15px;}*/
+
+#sidebar h2 { text-transform: uppercase; }
+
+a:link.subscribe, a:visited.subscribe 
+{ color: #f36a18; }
+
+a:hover.subscribe  {
+color: silver;}
+
+/* "welcoem to FAT..." */
+.description { font-size: 8pt; }
+
+/* top logo */
+#header img {
+  border: 0px solid #bebebe; 
+  float: left; 
+  margin-top: -20px; /* jdubs added negative top margin for proper alignment */
+}
+
+/* far right */
+#sidebar {
+  text-align: left;
+  position: absolute;
+  top: 170px;
+  right: 0;
+  width: 125px;
+  padding-bottom: 25px;
+}
+
+/* near right */
+#sidebar2 {
+  text-align: left;
+  position: absolute;
+  top: 170px;
+  left: 520px;
+  width: 250px;
+  padding-bottom: 25px;
+}
+
+#footer {
+  display: none;
+}
+
+#sidebar2 h3 {
+  margin: 2em 0 0 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  /*font-family: "Lucida Sans", sans-serif;*/
+}
+#sidebar2 h3 a {
+  background-color: #f0f;
+}
+
+#sidebar h1 a, .post h1 a {
+  font-weight: bold;
+/*  font-size: 3em; */
+  line-height: 20pt; /* jdubs: fix long titles */
+}
+
+p.postmetadata {
+  line-height: 1.4em;
+  margin: 10px 0 25px;
+  color: #5e5e5e;
+}
+
+
+.post {
+  text-align: left;
+  margin-left: 0px;
+  width: 500px;
+  position: absolute;
+  left: 0px;
+  top: 170px;
+  padding-bottom: 25px;
+}
+
+.entry {
+text-align: left;
+width: 500px;
+}
+
+/*.entry p:first-child {*/
+p.slogan {
+  /*font-weight: bold; */
+  font-style: italic;
+  font-size: 1.4em; 
+  padding-top: 0; 
+  /* jdubs: tone it down */ /*
+  color: #ff00ff; 
+  background: #fff000; */
+  color: #afa9a0;
+}
+
+.entry blockquote p:first-child {font-weight: normal; color: #444; font-size: inherit;}
+
+.entry blockquote {font-weight: normal; color: #444; font-size: 1.1em; border-left: 2px solid silver; margin: 1.2em 0 1.2em 2em; padding-left: 1em;}
+
+
+.cat a:link, .cat a:visited {
+  text-transform: uppercase;
+  color: #ff00ff;
+  background-color: #fff888; /* jdubs; was #fff000, tone down contrast */
+}
+.cat a:hover {
+  color: #c0c;
+  background-color: #fff000;
+}
+
+.cat {text-transform: uppercase;}
+
+.post img, .entry img, /* max width for imgs */
+.post embed, .post object /* max width for embeds */
+{
+  max-width: 500px;
+}
+
+.navigation {
+margin: 0 0 1em;
+  font-size: 16pt;
+}
+
+.center {text-align: center;}
+
+.borderless img, img.borderless {border: none;}
+
+.imgleft {float:left;}
+
+em {font-style: italic;}
+
+.entry li {display: block;}
+
+ul {padding-bottom: 1em;}
+
+ul.related li a{display: block;}
+ul.related li {display: block;}
+
+ul.archive li{display: block; padding: 0 0 1em;}
+ul.archive2 li{display: block; padding: 0 0 1em; font-size: 3em;}
+
+ul.archive p {
+display: block; padding: 0;}
+
+ul.archive {margin: 0; padding:0;}
+
+.alignleft {float: left;}
+.alignright {float: right;}
+
+/* Begin Comments*/
+
+/* Normal Bubble */
+.bubble {
+	width: auto;
+	margin-bottom: 24px;
+}
+
+.bubble blockquote {
+	margin: 0px;
+	padding: 10px;
+	border: 1px solid #c9c2c1;}
+
+
+.bubble blockquote p {
+	margin: 0px;
+	margin-bottom: 5px;
+	padding: 0px;
+	line-height: 1.3em;
+}
+
+
+.bubble cite {
+	position: relative;
+	margin: -7px;
+	padding: 7px 0px 10px 15px;
+	top: 5px;
+	background: transparent url('images/tip.gif') no-repeat 20px 0;
+	font-style: normal;
+	font-size: 1em;
+	display: block;
+}
+
+.bubble img {
+  max-width: 475px;
+  border: 0;
+}
+
+
+.alt {
+	}
+
+#commentform p {
+	padding: 5px 0;
+	font-size: 1.2em;
+	}
+
+#comment {
+
+	width: 336px;
+	height: 100px;
+	}
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+
+	
+#commentPreview {
+font-size: .8em;}
+
+.yatcp_commentlist li {
+  margin-top: 10px;
+} 
+
+.authorline {
+  display: inline;
+}
+
+/* End Comments */
+
+/* Share This */
+
+.sharethis {padding: 2em 0 3em;}
+
+#akst_form {margin-left: -50px;}
+
+/* End Share This */
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 125px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+	
+	#wp-calendar #prev a, #wp-calendar #next a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em "Helvetica Neue", Helvetica, Arial, Sans-Serif;;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+
+/* End Calendar */
+
+/* Begin Search */
+
+#search_form {
+width: 15px;}
+
+.search_input {
+width: 5px;}
+
+/* End Search */
+#applesearch .sbox_l  {
+	/*default styling*/
+}
+
+#applesearch .sbox_r  {
+	/*default styling*/
+}
+
+#applesearch .sbox input {
+	/*default styling*/
+	width: 125px;
+	float:left;
+}
+
+
+/* jdubs: ascii  */
+.ascii-art {
+  height: 170px;
+  overflow: hidden;
+}
+.ascii-art pre {
+  font-size: 12px;
+  font-famiy: "Monaco", "Lucida Console", "Courier New", monospace;
+}
+
+/* jdubs: some sidebar styles */
+.wppp_list {
+/*  margin-left: 12px; */
+  padding: 0;
+}
+.wppp_list li {
+  display: block;
+}
+
+/* jdubs: translations */
+#translations { 
+  margin: 0 auto;
+  margin-top: 3px;
+  width: 220px;
+}
+#translations a { 
+  margin-right: 10px; 
+  margin-bottom: 5px; 
+  background: transparent;
+  opacity: 0.8;
+} 
+#translations a:hover {
+  opacity: 1;
+}
+#translations img { 
+
+/*  width: 24px; */
+  width: 20px;
+}
+
+
+/* jdubs: gallery mode/captions */
+div.wp-caption a {
+  border: 0;
+  padding: 0;
+}
+div.wp-caption p.wp-caption-text {
+  padding: 0 0 0.5em 0;
+  font-style: italic;
+}
+
+/* test */
+div.aideRSS-top div { display: none; }
+
