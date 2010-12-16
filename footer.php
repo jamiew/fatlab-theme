@@ -10,7 +10,7 @@
 
 
 
-<!-- google analytics -->
+<!-- Google analytics -->
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -26,7 +26,17 @@ pageTracker._trackPageview();
 <noscript>
 <a href="http://www.quantcast.com/p-149W7Ang9fLCQ" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-149W7Ang9fLCQ.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/></a>
 </noscript>
-<!-- End Quantcast tag -->
+
+<!-- Buzzfeed stats -->
+<div id="BF_WIDGET_1">&nbsp;</div>
+<script type="text/javascript">
+(function( ){
+BF_WIDGET_JS=document.createElement("script"); BF_WIDGET_JS.type="text/javascript";
+BF_WIDGET_SRC="http://ct.buzzfeed.com/wd/UserWidget?u=fffff.at&amp;to=1&amp;or=vb&amp;wid=1&amp;cb=" + (new Date()).getTime();
+setTimeout(function() {document.getElementById("BF_WIDGET_1").appendChild(BF_WIDGET_JS);BF_WIDGET_JS.src=BF_WIDGET_SRC},1);
+})();
+</script>
+
 
 </body>
 </html>

@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+
+<meta name="robots" content="noindex,follow" />
+
 <div class="post">
 	<div class="entry">
 		<h2>Searching...</h2>
@@ -12,7 +15,7 @@
 		<li id="post-<?php the_ID(); ?>">
 			<h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 			<?php //the_excerpt_reloaded(15, '', 'excerpt', FALSE, '[more]', FALSE, 1, TRUE); ?>
-			<?php the_excerpt(15, '', 'excerpt', FALSE, '[more]', FALSE, 1, TRUE); ?>
+			<?php the_excerpt(25, '', 'excerpt', FALSE, '[more]', FALSE, 1, TRUE); ?>
 			<p class="postmetadata">Posted on <?php the_time('M d.y') ?> to <span class="cat"><?php the_tags(', ') ?></span> &nbsp; <?php comments_popup_link('Add a Comment', '1 Comment', '% Comments'); ?> &nbsp;&nbsp;<?php edit_post_link('Edit', '', ''); ?>
 			</p>
 		</li>
@@ -35,6 +38,7 @@
 </div>
 <div id="sidebar2">
 	<h1>Search Results</h1>
+	<!--
 	<p>
 		<small>
 			Look what we found.
@@ -43,8 +47,9 @@
 	<ul>
 		<li><b>TRY</b> / AGAIN?</li>
 		<li>
-			<?php include (TEMPLATEPATH . '/searchform.php'); ?>		</li>
+			<?php //include (TEMPLATEPATH . '/searchform.php'); ?>		</li>
 	</ul><br/>
+	-->
 
 
 <?php get_sidebar(); ?>

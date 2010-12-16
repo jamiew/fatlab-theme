@@ -2,7 +2,11 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <div class="post" id="post-<?php the_ID(); ?>">
-        <h1 class="title"><a href="<?php echo get_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>"><?php the_title(); ?></a></h1>
+        <h1 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h1>
+        <div class="postmetadata" style="margin: -8px 0 0 0; padding: 0; color: #777;">
+          by <span class="cat"><?php the_author_posts_link(); ?></span>
+        </div>
+
 
 	<div class="entry">
 	        

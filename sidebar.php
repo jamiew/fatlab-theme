@@ -1,9 +1,11 @@
-<br />
+<!-- BIGGER 'SUBSCRIBE' ISH -->
+<a href="/rss" onclick="pageTracker._trackEvent('subscribe', 'rss', 'feed-pill-whitebg.gif');"><img src="http://jamiedubs.com/images/feed-pill-whitebg.gif"></a>
+
 
 <!-- ***** FAT LAB TWITTER ***** -->
 <!--<script src="<?php bloginfo('template_directory') ?>/js/twitter.js" type="text/javascript" charset="utf-8"></script>-->
 <script type="text/javascript" charset="utf-8">
-getTwitters('twitter', {
+getTwitters('twitter-fffffat', {
   id: 'fffffat',
   count: 3,
   enableLinks: true,
@@ -13,8 +15,15 @@ getTwitters('twitter', {
 });
 </script>
 
-<h3><a href="http://twitter.com/fffffat" style="border: 0; text-decoration: none;"><img src="http://amitgupta.com/images/socialicons/twitter_icons_16.png" /> @fffffat</a></h3>
-<div id="twitter"><em>Loading...</em></div>
+<h3><a href="http://twitter.com/fffffat" style="border: 0; text-decoration: none;" onclick="pageTracker._trackEvent('socmedia', 'twitter', 'pink');"><img src="/images/twitter_icons_16.png" /> @fffffat</a></h3>
+<div class="twitter-widget" id="twitter-fffffat"><em>Loading...</em></div>
+
+<!-- **** Facebook liek button **** -->
+<h3><a href="http://www.facebook.com/pages/FAT-Lab/116375168383207" onclick="pageTracker._trackEvent('socmedia', 'facebook_page', 'pink');">Facebook</a></h3>
+<iframe style="border: 1px solid #eee; background-color: #f5f5f5; width: 220px; height: 80px; padding: 8px;" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F
+%2Ffffff.at%2F&amp;layout=standard&amp;show_faces=true&amp;width=220&amp;action=like&amp;font=lucida+grande&amp;colorscheme=light" scrolling="no" frameborder="0" allowTra
+nsparency="true" style="border:none; overflow:hidden; width:220px; height:80px"></iframe><br />
+
 
 
 <!-- traffic from social websites (for individual posts only) -->
@@ -24,53 +33,65 @@ getTwitters('twitter', {
 <?php endif; ?>
 
 
-<!-- email subscribe form -->
-<form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
-   <input type="hidden" name="list" value="stuff" />
-   <input type="hidden" name="domain" value="fffff.at" />
-   <input type="hidden" name="stuff@fffff.at" value="1" />
-   
-   <h3>FAT Lab email newsletter:</h3> 
-   <input name="email" /><br />
-   <input type="submit" name="submit" value="Sign Up Fool!" />
-   <!--<input type="submit" name="unsub" value="Unsubscribe" />-->
-</form>
-
-
+<!-- popular this week -->
 <?php if ( function_exists('WPPP_show_popular_posts')) :?>
   <!-- popular posts lately -->
-  <h3>POPULAR THIS WEEK::</h3>
+  <h3>Popular This Week::</h3>
   <?php 
     // show=posts
-    WPPP_show_popular_posts( "title=&number=8&days=7&format=<a href='%post_permalink%' title='%post_title_attribute%'>%post_title%</a> (%post_views% views)" );
+    WPPP_show_popular_posts( "title=&number=8&days=8&format=<a href='%post_permalink%' title='%post_title_attribute%'>%post_title%</a> (%post_views% views)" );
+  ?>
+<?php endif; ?>
+
+<!-- today -->
+<?php if ( function_exists('WPPP_show_popular_posts')) :?>
+  <!-- popular posts lately -->
+  <h3>Popular Today::</h3>
+  <?php
+    // show=posts
+    WPPP_show_popular_posts( "title=&number=4&days=2&format=<a href='%post_permalink%' title='%post_title_attribute%'>%post_title%</a> (%post_views% views)" );
   ?>
 <?php endif; ?>
 
 
-<!-- popular this month via aiderss -->
-<h3>POPULAR THIS MONTH::</h3>
-<!-- Blog ID: 153923 -->
-<!-- Replace 'year' with the time period you would like: (year, month, week, day) -->
-<!-- Replace 5 with the number of records to return. -->
-<div id="aidewidget"></div>
-<script type="text/javascript"
-src="http://api.aiderss.com/static/top_posts.js">
-</script>
+<!-- popular this month via aiderss/postrank -->
+<!--
+<h3>Popular This Month::</h3>
+<script type="text/javascript" src="http://api.postrank.com/static/widget-v2.js"></script>
 <script type="text/javascript">
-new AideWidget('aidewidget', 153923, 'month', 8);
+var options = {
+	"feed_hash": "e9b44514b970e8c36bc14e793b92c20a",
+	"num":        6 ,
+	"theme":     "diy" 
+};
+new PostRankWidget(options);
 </script>
-
+-->
 
 <!-- translations -->
 <?php //if(function_exists("gltr_build_flags_bar")): ?>
 <?php //jdubs: disabling for now based on some foreigner feedback re. machine translation being worse than just doing it in English ?>
 <?php // also, Google throttles you pretty aggressively... frequenty downtime :\ --> ?>
 <?php if(false): ?>
-<h3>TRANSLATE</h3>
+<h3>Auto-Translate</h3>
 <div id="translations">
   <?php gltr_build_flags_bar(); ?>
 </div>
 <?php endif; ?>
+
+
+<!-- email subscribe form -->
+<form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+   <input type="hidden" name="list" value="stuff" />
+   <input type="hidden" name="domain" value="fffff.at" />
+   <input type="hidden" name="stuff@fffff.at" value="1" />
+
+   <h3>FAT Lab email newsletter:</h3>
+   <input name="email" /><br />
+   <input type="submit" name="submit" value="Sign Up Fool!" />
+   <!--<input type="submit" name="unsub" value="Unsubscribe" />-->
+</form>
+
 
 
 <!-- tagcloud -->
@@ -126,12 +147,20 @@ wp_tag_cloud('smallest=8&largest=15&number=80&order=ASC&format=flat');
                 <?php //wp_list_pages('sort_column=menu_order&title_li='); ?>
                 <?php //wp_list_pages('title_li=<h3>Inside</h3>'); ?>
 
+                <li><h3>Search</h3></li>
+		<li><?php include (TEMPLATEPATH . '/searchform.php'); ?><br/><br/></li>
+
+
+		<!-- navigation -->
 		<p style="font-size: 2em; font-style:bold;">
 			<a href="http://fffff.at/about">About</a><br><br>
 			<a href="http://fffff.at/fuckflickr">Photos</a><br><br>
-			<a href="http://fffff.at/category/projects">Projects</a><br><br>
+			<a href="http://fffff.at/chat">IRC Chat</a><br><br>
 			<a href="http://fffff.at/people">People</a><br><br>
-			<a href="http://fffff.at/category/events/">Events</a><br><br>
+                        <a href="http://fffff.at/category/projects">Projects</a><br><br>
+			<!--<a href="http://fffff.at/category/events/">Events</a><br><br>-->
+                        <a href="http://fffff.at/fucktwitter">MicroBlog</a><br><br>
+                        <a href="http://soup.fffff.at">Soup</a><br><br>
 
 			<!-- 'downloads' is kind of an ambigious category... FIXME /jdubs -->
 			<!-- removing a couple of minimally used and never visited categories nov 16th 2008 -jdubs -->
@@ -146,10 +175,6 @@ wp_tag_cloud('smallest=8&largest=15&number=80&order=ASC&format=flat');
 		</p>
 		
 		
-		<li><h3>Search</h3></li>
-				<li><?php include (TEMPLATEPATH . '/searchform.php'); ?><br/><br/></li>
-
-
                 <!-- Tokyo FAT LINK  -->
                 <a href="http://tokyo.fffff.at">Tokyo F.A.T.</a>:<br><img src="http://fffff.at/fuckflickr//data/MISC/tkyfffffat_banner_200px.jpg" />
 
@@ -186,6 +211,10 @@ getTwitters('twitter-<?php print $peep ?>', {
                  -->
 			
 <li>Copyfree and in the Public Domain; 2007-<?php print date('Y') ?> by <?php bloginfo('name'); ?>. No rights reserved.<br/>
+<br>
+<br>
+
+<link rel="alternate" type="application/rss+xml" title="F.A.T. RSS Feed" href="http://feeds2.feedburner.com/fffff/feed" />
 
 <!-- this shit is 404 now /jdubs -->
 <!-- yo it's back! /slam -->

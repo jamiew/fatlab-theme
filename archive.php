@@ -1,9 +1,13 @@
 <?php get_header(); ?>
 <div class="post">
 <div class="entry">
+<?php if(is_category()): ?>
+  <p class="byline">Browsing all <?php single_cat_title("", false) ?></span> posts</p>
+<?php endif; ?>
 
 <?php 
 // some dope ASCII art, via `figlet` --jdubs
+/*
 if(is_category() || is_tag()) {
   print '<div class="ascii-art"><pre>'."\n";
   $current_category = str_replace('"', '', single_cat_title("", false));
@@ -14,6 +18,7 @@ if(is_category() || is_tag()) {
   print "\n<!-- figlet font: $font -->\n";
   print '</pre></div>'."\n";
 }
+*/
 ?>
 
 	<?php if (have_posts()) : ?>
